@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-01-05">
 
-<title>main – Giorgia Santucci</title>
+<title>The effect of Price on Cosmetics Purchase Intention and Customer behavior – Giorgia Santucci</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -108,7 +138,30 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The effect of Price on Cosmetics Purchase Intention and Customer behavior</h1>
+            <p class="subtitle lead">Price, Popularity and Sentiment</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 5, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -119,7 +172,262 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="price-the-key-to-our-decision-making-process" class="level4">
+<h4 class="anchored" data-anchor-id="price-the-key-to-our-decision-making-process">Price: the key to our decision making process?</h4>
+<p>While shopping for products one of our main concearns is <strong>Price</strong>. When scrolling on e-commerce website we’re trying to find the best deals: we compare prices of different products and from different platforms, we sort products based on it…and even when eventually we buy something, the price is still in our mind. We evaluate the product based on it, we wonder if the price-quality ratio is good or not, and finally decide if it was worth it, if we’re happy with our choices, through <strong>a logic that places price at the centre of our decision making process and our satisfaction</strong></p>
+</section>
+<section id="raising-prices-do-you-follow-or-switch-sides" class="level4">
+<h4 class="anchored" data-anchor-id="raising-prices-do-you-follow-or-switch-sides">Raising prices: do you follow or switch sides?</h4>
+<p>In this post we are interested in knowing <strong>how prices influence our behavior while shopping for cosmetics</strong>. For providing a better context, let’s clarify that <strong>cosmetics usually have elastic demand</strong>. This means that if the price goes up, people tend to buy less, and if the price goes down, they buy more. This is because cosmetics are not necessities but rather optional purchases, and <strong>consumers are price-conscious</strong>. Moreover, cosmetics is a highly competitive market where consumers can choose among many substitutes and easily switch from one to another. Overall, we can say that price is a major factor while shopping for this category of products.</p>
+</section>
+<section id="if-price-is-so-important-for-us-then-how-does-it-interrelate-with-product-popularity-and-customer-satisfaction" class="level4">
+<h4 class="anchored" data-anchor-id="if-price-is-so-important-for-us-then-how-does-it-interrelate-with-product-popularity-and-customer-satisfaction">If price is so important for us, then <strong>how does it interrelate with product popularity and customer satisfaction</strong>?</h4>
+<p>For example, if a product is expensive would you expect it to be more or less popular? Are cheaper cosmetics more widespread or less, compared to the luxury ones? If the price of your favourite face cream goes up, to which degree would you be willing to keep on paying for it? And what about customer satisfaction…what role does the price play in defining consumers’ overall satisfaction with a product? An higher price improves the perception of the product? How do we shape our expectations while considering an expensive cosmetic? Are we more likely to rate positively a cheap or a luxury product?</p>
+</section>
+<section id="methodology" class="level4">
+<h4 class="anchored" data-anchor-id="methodology">Methodology</h4>
+<p>These are some of the questions that we will try to answer in this post. But first, let me tell you how this analysis was conducted.</p>
+<p>Our test subject for finding answers to these questions is <a href="https://www.douglas.it/">Douglas</a> cosmetics, together with its customer base. Product data from 3 macro-categories such as Body (detergents and treatments), Face (detergents and treatments) and Hair (styling and treatments) were scraped during summer 2024, including <strong>price per product</strong>, <strong>number of reviews per product</strong>, <strong>rating</strong> (ranging from 1 to 5), product brand, and eventually the presence of a cruelty-free claim. To the latter I have dedicated an entire article, where I’ve shown how cruelty-free claims influence product popularity and consumer sentiment towards products. If you missed it, check it out <a href="https://giorgia-santucci.github.io/posts/Analysis%20of%20Popularity%20and%20Sentiment%20of%20Cruelty-free%20declared%20and%20certified%20cosmetics/main.html">here!</a>.</p>
+<p>Data collection was conducted in an automatic manner with web-scraping technique, and after some hard work of pre-processing and encoding, that you can read in the section <a href="https://giorgia-santucci.github.io/posts/Analysis%20of%20Popularity%20and%20Sentiment%20of%20Cruelty-free%20declared%20and%20certified%20cosmetics/main.html">“methodology”</a>, I was left with a <strong>5620 product details tidy and ready to work on</strong>.</p>
+<p>With this in mind, here’s how we will proceed:</p>
+<ul>
+<li>We will start by <strong>analyzing Douglas dataset looking at summary statistics</strong> and understanding the essential features of our dataset, including prices, ratings and reviews count.</li>
+<li>We will <strong>explore the relationships between these variables</strong> to understand how they influence consumers’ satisfaction and the overall popularity of cosmetics.</li>
+</ul>
+<p><em>By the end of this post, you’ll have an idea on how Douglas customers react to prices: do they prefer expensive or cheaper options? Do they feel more satisfied with a luxury product or the cheap ones?</em></p>
+<p>Let’s get started!</p>
+</section>
+<section id="descriptive-statistics-a-preliminary-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics-a-preliminary-analysis">Descriptive Statistics: a preliminary analysis</h2>
+<table class="caption-top table">
+<caption>Descriptive Statistics</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>x</th>
+<th style="text-align: center;">mean</th>
+<th style="text-align: center;">std</th>
+<th style="text-align: center;">Min</th>
+<th style="text-align: center;">25%</th>
+<th style="text-align: center;">50%</th>
+<th style="text-align: center;">75%</th>
+<th style="text-align: center;">Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>price</td>
+<td style="text-align: center;">34.14</td>
+<td style="text-align: center;">50.95</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">10.99</td>
+<td style="text-align: center;">22.60</td>
+<td style="text-align: center;">41.99</td>
+<td style="text-align: center;">770.99</td>
+</tr>
+<tr class="even">
+<td>rating</td>
+<td style="text-align: center;">4.5</td>
+<td style="text-align: center;">0.71</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">4.30</td>
+<td style="text-align: center;">4.70</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">5.00</td>
+</tr>
+<tr class="odd">
+<td>reviews</td>
+<td style="text-align: center;">11.90</td>
+<td style="text-align: center;">40.60</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">8.00</td>
+<td style="text-align: center;">995.00</td>
+</tr>
+</tbody>
+</table>
+<section id="prices" class="level3">
+<h3 class="anchored" data-anchor-id="prices">Prices:</h3>
+<p>While the least expensive product on the platform is 1.99 euros and the most expensive is 770 euros, the average price of products is around 34. <strong>With a budget up to 23 euros, you can choose among 50% of the entire catalogue</strong>, with 25% of the products being maximum priced 10.99 euros. This makes Douglas a great choice for those who want to buy cosmetics on a budget, offering a wide range of affordable options. If you’re going for more luxury products instead, or you’re looking for a present for someone who’s not <em>“it’s the thought that counts”</em>, <strong>with a budget over 42 euros you only have access to 25% of the products</strong>. Products that represent a good compromise between cheap and luxury, ranging from 23 to 42 euros, are being squeezed in the 25% of the catalogue between the 2nd and 3rd quartile. According to this data, luxury products are a smaller segment of Douglas inventory, where more space is given to low-cost products. Maybe a price distribution plot can make things clearer.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="main_files/figure-html/cell-2-1-priceplot.png" class="img-fluid figure-img"></p>
+<figcaption>Price Plot, Normal Distribution</figcaption>
+</figure>
+</div>
+<p><strong>Follow me reading the plot from left to right</strong>: there’s a very small quantity of products priced 1 and 2 euros, and products priced 3, 3.5 and 4 euros get to around 200 items in total. Products count keeps on growing with price 5 to 9 euros but remains relatively low, slightly above 200 items. When we get to 10 euros we meet the first peek: notice that 10 as an exact price is at the end of its own spike, with products most probably price 9.99 taking over the spike range. More than 300 products are price 10 euros. The range between 10 and 20 euros is very dense of products, with another peak before the 20 euros mark. At <strong>20 euros we have the highest peak of the distribution, called mode, which represents the most common price in the catalogue</strong>, with a quantity of more than 400 products with this price. Between 20 and 30 euros we stay up with products count, close to 400 and never below 300. <strong>At 30 euros we have the second highest peak</strong> again with more than 400 items. After 30 euros, products count starts decreasing, getting back to 100 items with a 100 euro price.</p>
+<p>Now you can definetly see why I said that Douglas is a better choice for buying on a budget, since <strong>there’s way more options with a price below 10 than with a price above 30</strong>. Products are mostly priced 10, 15, 20 and 30 euros. Think about it now, aren’t these exactly the prices that the majority of people are willing to pay for a hair, face or body product?</p>
+</section>
+<section id="ratings" class="level3">
+<h3 class="anchored" data-anchor-id="ratings">Ratings:</h3>
+<p>Average rating for products on Douglas is 4.5/5, with only 25% of ratings being below 4.3 and at least half of them being above 4.7. According to this results, we can easily say that <strong>Douglas’ customers are satisfied with their products and tend to leave positive reviews</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="main_files/figure-html/cell-2-2-ratingsplot.png" class="img-fluid figure-img"></p>
+<figcaption>Ratings Plot</figcaption>
+</figure>
+</div>
+<p>From the ratings plot you can see that products are mostly positively rated, with 5/5 being the most common rating. <strong>2500 is almost half of our sample size! This means that almost 50% of products are rated 5 stars</strong>.</p>
+</section>
+<section id="reviews-count" class="level3">
+<h3 class="anchored" data-anchor-id="reviews-count">Reviews Count</h3>
+<p>Average number of reviews under Douglas’ products is 11/12 reviews, but the standard deviation suggests that the values vary widely across the dataset. In fact, from the quartiles we can see that 50% of products have at most 3 reviews, and only 25% of them have more than 8 reviews. At the same time, the max value witnesses a product with 995 reviews.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="main_files/figure-html/cell-2-3-scatterplotratings.png" class="img-fluid figure-img"></p>
+<figcaption>Rating per Number of Reviews, ScatterPlot</figcaption>
+</figure>
+</div>
+<p>This scatterplot shows the relationship between Rating as independent variable and Number of Reviews as dependent variable. While there is no relationship between the two variables, we can still make some comments.</p>
+<p>There’s no observations (products) with a high number of reviews and an extremely low rating (from 1 to 2) and, while it gets denser around 3 and 3.5, the amount of observations with an higher number of reviews starts growing significantly only when we overcome the rating of 4. In particular, there’s quite a lot of products with 4.5 as rating and higher number of reviews: at the top right we can see <strong>the observation with the highest amount of reviews close to 1000, it’s the max value (995)</strong> we have in the descriptive statistics: now we know it’s a product with 4.5 rating! We observe a similar situation until we get to the perfect rating of 5. The plot shows that <strong>products with a 5 star rating have a number of reviews that doesn’t even get to 200</strong>.</p>
+<p>Now think about our previous finding: <em>yes</em>, it is true that almost 50% of our products are rated 5 stars (look at the ratings plot) <strong><em>but</em></strong> these evidence takes a different turn when we find out that that number is based on a low amount of reviews.</p>
+<p>While it’s still correct to say that products on Douglas are mostly highly rated, it’s also important to note that 5/5 products rely on the opinion of few customers.</p>
+</section>
+</section>
+<section id="how-do-customers-react-to-prices" class="level1">
+<h1>How do customers react to prices?</h1>
+<p>To assess how Douglas customers react to prices, I decided to focus on 2 main points:</p>
+<ol type="1">
+<li>The first question is <strong><em>RQ1: Does the price of a product affect its popularity?</em></strong> Given popularity (the number of reviews) as dependent variable, I used prices, brands and presence of a cruelty-free claim to understand how these variables impact on the amount of reviews for products (which reflects popularity). These dynamics will be explained by the following OLS model</li>
+</ol>
+<p><span class="math display">\[𝑃𝑜𝑝𝑢𝑙𝑎𝑟𝑖𝑡𝑦 = 𝛼 + 𝛽1𝐶𝑙𝑎𝑖𝑚 + 𝛽2𝑃𝑟𝑖𝑐𝑒 + 𝛽3𝐵𝑟𝑎𝑛𝑑\]</span></p>
+<ol start="2" type="1">
+<li>Second question is <strong><em>RQ2: Does the price of a product affects consumers’ sentiment towards it?</em></strong> Given sentiment as ratings (from 1 to 5), I used prices, brands and presence of a cruelty-free claim to understand how these variables impact on the rating that consumers give to products (which reflects sentiment). The above mentioned relationship will be explained by the following WLS model</li>
+</ol>
+<p><span class="math display">\[𝐿(𝛼, 𝛽) = ∑𝑤𝑖 (𝑆𝑒𝑛𝑡𝑖𝑚𝑒𝑛𝑡 − 𝛼 − 𝛽1𝐶𝑙𝑎𝑖𝑚 − 𝛽2𝑃𝑟𝑖𝑐𝑒 − 𝛽3 𝐵𝑟𝑎𝑛𝑑)^{2}\]</span></p>
+<p>The results of the models are presented in the following figures:</p>
+<div id="tbl-panel" class="quarto-layout-panel anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Results
+</figcaption>
+<div aria-describedby="tbl-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-panel" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-first" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-first-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Popularity model
+</figcaption>
+<div aria-describedby="tbl-first-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">X</th>
+<th style="text-align: left;">Coeff.</th>
+<th style="text-align: left;">Stand.Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">const.</td>
+<td style="text-align: left;">-6.318*</td>
+<td style="text-align: left;">4.814</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cruelty-free claim</td>
+<td style="text-align: left;">6.358*</td>
+<td style="text-align: left;">3.411</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>price</strong></td>
+<td style="text-align: left;">5.735***</td>
+<td style="text-align: left;">1.556</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-panel" style="flex-basis: 50.0%;justify-content: center;">
+<div id="tbl-second" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-second-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Sentiment model
+</figcaption>
+<div aria-describedby="tbl-second-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">X</th>
+<th style="text-align: left;">Coeff.</th>
+<th style="text-align: left;">Stand.Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">const.</td>
+<td style="text-align: left;">4.263***</td>
+<td style="text-align: left;">0.060</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cruelty-free claim</td>
+<td style="text-align: left;">-0.131**</td>
+<td style="text-align: left;">0.058</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>price</strong></td>
+<td style="text-align: left;">0.071***</td>
+<td style="text-align: left;">0.018</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<p>***p&lt;0.01, **p&lt;0.05, *p&lt;0.1</p>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>As we can see, the models are able to explain popularity and sentiment of products based on the independent variables above mentioned. While we have already discussed the implications for the presence of cruelty-free claims on both popularity and sentiment <a href="https://giorgia-santucci.github.io/posts/Analysis%20of%20Popularity%20and%20Sentiment%20of%20Cruelty-free%20declared%20and%20certified%20cosmetics/main.html">here</a>, let’s focus now on <strong>price and how relates to popularity and sentiment</strong>.</p>
+<ol type="1">
+<li>To answer our <strong><em>RQ1</em></strong> about the Price and Popularity relationship, we look at the coefficient 𝛽2𝑃𝑟𝑖𝑐𝑒 in the Popularity model. It’s positive and highly significant, meaning that there is a positive relationship between the two variables: in other words this means that <strong>as the price increases, products popularity increases too</strong> and it’s not due to any random change. Since 𝛽2Price is log-transformed (as in the price plot), but Popularity is not, we do β2/100 and read the result as follows: <strong><em>1% increase in Price is associated with 0.05735 increase in Popularity</em></strong>. With few calculations we can make a realistic example of how the popularity of a product increases with a 30% increase in price:</li>
+</ol>
+<p><span class="math display">\[Popularity= 𝛽2𝑃𝑟𝑖𝑐𝑒 x log(1.30)\]</span></p>
+<p><span class="math display">\[Popularity= 5.735 x 0.2624 ≈ 1.50\]</span></p>
+<p>This means that <strong>when price increases by 30%, products have around 1.5 additional reviews</strong>. Let’s make it even more concrete: average price for a product on Douglas.it is 34 euros and counts 11 reviews. An hyphotetical product that costs 30% more (so around 44 euros) will have ≈ 13 reviews, and that’s how it gets “more popular”. This goes on for all products and prices, a 40% price increase leads to approximately 1.93 additional reviews, a 50% price increase leads to approximately 2.32 additional reviews…</p>
+<p>In conclusion, we say that <strong><em>Yes, the price of a product affects its popularity</em></strong> and that <strong><em>the more expensive a product is, the more reviews it gets</em></strong>.</p>
+<ol start="2" type="1">
+<li>To answer our <strong><em>RQ2</em></strong> about the Price and Sentiment relationship, we look at the coefficient 𝛽2𝑃𝑟𝑖𝑐𝑒 in the Sentiment model. It’s positive and highly significant, meaning that there is a positive relationship between the two variables which doesn’t happen randomly and <strong>as the price increases, rating increases too</strong>. The coefficient, however, is small. Because 𝛽2𝑃𝑟𝑖𝑐𝑒 is log-transformed, according to the same logic explained above, we can say that <strong><em>1% increase in Price is associated with 0.00071-unit increase in Sentiment</em></strong>. To make it more practical let’s calculate the change in sentiment for a 100% increase in price:</li>
+</ol>
+<p><span class="math display">\[Sentiment= 𝛽2𝑃𝑟𝑖𝑐𝑒 x log(2.00)\]</span></p>
+<p><span class="math display">\[Sentiment= 0.071 x 0.6931 ≈ 0.0492\]</span></p>
+<p>This means that <strong>when the price is doubled, the sentiment of a product increases by approximately 0.0492 units</strong>. This is a very small change, so small that if a product on Douglas.it costs 34 euros and it’s rated 4.5 stars, an hyphotetical product that costs twice the price (68 euros) will be rated 4.5 + 0.0492 = 4.5492 stars. Basically, nothing changes!</p>
+<p>In conclusion, we say that <strong><em>Yes, the price of a product affects its sentiment</em></strong> but <strong><em>the effect of price over rating is so small that it doesn’t affect the overall rating of the product</em></strong>.</p>
+</section>
+<section id="conclusion-and-final-toughts" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-and-final-toughts">Conclusion and Final toughts</h2>
+<p>In this article we got to know Douglas a little bit better: its prices are overall reasonable, there’s a lot of choice of low-priced products, and the reviews on the platform are mostly positive. Moreover, with this analysis we found out that price is extremely important for defining both Popularity and Consumers Sentiment.</p>
+<section id="customers-purchase-intention" class="level3">
+<h3 class="anchored" data-anchor-id="customers-purchase-intention">Customers purchase intention</h3>
+<p>We acknowledged that more expensive products have more reviews on Douglas, so people buy them and rate them more, and this makes them <em>more popular</em>. In other words, we could say that <strong>customer purchase intentions are higher as the product gets more expensive</strong>. Or maybe, <strong>consumers are more likely to leave a review if the product is expensive</strong>…this is one more interpretation.</p>
+</section>
+<section id="customer-behavior-between-perception-and-expectations" class="level3">
+<h3 class="anchored" data-anchor-id="customer-behavior-between-perception-and-expectations">Customer behavior between perception and expectations</h3>
+<p>We realized that consumers satisfaction is also affected by price, and tends to increase as the price goes up but doesn’t lead to a visible increase in ratings. This may support the idea that <strong>consumers are not easily fooled by expensive products</strong>. The relationship between price and ratings is small, but it’s there and it’s strong. Therefore, we can talk about <strong>perceptions</strong> and <strong>expectations</strong>.</p>
+<p>Our results may indicate that consumers tend to have <strong>higher perception as the product gets more expensive, rather than higher expectations</strong>. Because price and rating grow together, it’s a sign that consumers have a better perception of the product as the price increases.</p>
+<p>If consumers had higher expectations as the price goes up, there would have been a negative relationship between price and ratings. As if to say, if consumers buy expensive products and then rate them lower, it’s a response to their high-but-failed expectations. This is, in my opinion, the most interesting result so far.</p>
+<p>But, if the effect of price on ratings is so small, then what is it that pushes consumers to leave such great reviews? Maybe…<strong>BRANDS</strong>? We’ll find out soon</p>
 
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
